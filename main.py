@@ -20,7 +20,7 @@ app.add_middleware(
 model = tf.keras.models.load_model("model.keras")
 
 # Sesuaikan ini dengan label yang digunakan di modelmu
-class_names = ["sehat", "agak_layu", "sangat_layu", "lainnya"]
+class_names = ["Plants not detected!", "Your Plant is wilting!", "Your Plant seems Good!", "Your Plant is Excellent!"]
 
 def preprocess_image(image_bytes):
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
